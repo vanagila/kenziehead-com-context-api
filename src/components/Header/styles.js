@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.nav`
+export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -15,4 +15,7 @@ export const Container = styled.nav`
     margin: 0;
     padding-left: 10px;
   }
+`;
+export const Container = styled.div`
+  display: flex;
 `;
