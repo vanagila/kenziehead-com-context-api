@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../providers/Cart";
 import { ProductContext } from "../../providers/Products";
-import { Container, CardCart } from "./styles";
+import { Container, CardCart, RemoveAllBttn } from "./styles";
 import "./styles.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -11,7 +11,9 @@ export const Cart = () => {
 
   return (
     <>
-      <button onClick={() => removeAll()}>ESVAZINHAR CARRINHO</button>
+      <RemoveAllBttn onClick={() => removeAll()}>
+        ESVAZINHAR CARRINHO
+      </RemoveAllBttn>
       {cart.map((item) => {
         return (
           <Container key={item.id}>
