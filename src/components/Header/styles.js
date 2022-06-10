@@ -14,13 +14,16 @@ export const NavBar = styled.nav`
     padding-top: 25px;
     margin: 0;
     padding-left: 10px;
+    cursor: pointer;
   }
 `;
 export const Container = styled.div`
   display: flex;
+  margin: 0;
+  cursor: pointer;
 `;
 
 export const CartPrice = styled.div`
-  /* margin-left: 10px; */
+  margin: 0;
   color: rgba(0, 197, 105);
 `;
