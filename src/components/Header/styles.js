@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavBar = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   height: 70px;
   width: 100%;
@@ -18,4 +18,9 @@ export const NavBar = styled.nav`
 `;
 export const Container = styled.div`
   display: flex;
+`;
+
+export const CartPrice = styled.div`
+  /* margin-left: 10px; */
+  color: rgba(0, 197, 105);
 `;

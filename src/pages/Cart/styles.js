@@ -45,3 +45,16 @@ export const CardCart = styled.div`
     font-weight: 500;
   }
 `;
+
+export const RemoveAllBttn = styled.button`
+  width: 150px;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid #1c5db9;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #1c5db9;
+  background-color: white;
+  margin-bottom: 25px;
+`;

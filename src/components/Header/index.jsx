@@ -1,4 +1,4 @@
-import { Container, NavBar } from "./styles";
+import { Container, NavBar, CartPrice } from "./styles";
 import "./styles.css";
 import { useHistory } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
@@ -21,14 +21,13 @@ export const Header = () => {
   return (
     <NavBar>
       <h3 onClick={() => history.push("/")}>KenziePhone</h3>
-      <Container>
-        <FaShoppingCart
-          className="cart-icon"
-          onClick={() => goToCart("/signup")}
-        />
+      <Container onClick={() => goToCart("/signup")}>
+        <FaShoppingCart className="cart-icon" />
         <p>{cart.length}</p>
-        <span>{totalPrice}</span>
       </Container>
+      <CartPrice>
+        <span>R$ {totalPrice}</span>
+      </CartPrice>
     </NavBar>
   );
 };
