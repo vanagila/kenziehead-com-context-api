@@ -28,6 +28,7 @@ export const CardInfo = styled.div`
   justify-content: center;
   align-items: center;
   height: 50%;
+  width: 100%;
   background-color: var(--cinza-zero);
   gap: 15px;
 

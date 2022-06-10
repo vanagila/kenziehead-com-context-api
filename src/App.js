@@ -9,11 +9,10 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Routes>
-        <ProductProvider>
-          <Home />
-        </ProductProvider>
-      </Routes>
+      <ProductProvider>
+        <Header />
+      </ProductProvider>
+      <Routes />
     </div>
   );
 }
