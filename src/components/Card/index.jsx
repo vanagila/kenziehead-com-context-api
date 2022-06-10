@@ -1,8 +1,10 @@
 import { CardContainer, CardInfo } from "./styles";
 import { useContext } from "react";
 import { ProductContext } from "../../providers/Products";
+import { CartContext } from "../../providers/Cart";
 export const Card = () => {
   const { products } = useContext(ProductContext);
+  const { addProduct } = useContext(CartContext);
 
   return (
     <>
@@ -15,7 +17,7 @@ export const Card = () => {
             <CardInfo>
               <h4>{product.name}</h4>
               <span>R$ {product.price}</span>
-              <button>COMPRAR</button>
+              <button onClick={() => addProduct(product)}>COMPRAR</button>
             </CardInfo>
           </CardContainer>
         );
