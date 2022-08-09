@@ -8,4 +8,4 @@ Esse projeto foi desenvolvido no curso de Front-End da Kenzie Academy Brasil. As
 
 ### `Tecnologias usadas`
 
-Para a estilização foi usado a biblioteca styled-components e router dom para lidar com as rotas.
+Para a estilização foi usado a biblioteca styled-components e router dom para lidar com as rotas. A aplicação também foi desenvolvida com MOBILE FIRST
