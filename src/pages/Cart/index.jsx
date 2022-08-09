@@ -1,36 +1,17 @@
 import { useContext } from "react";
+
+import { Wrap } from "./styles";
+
+import { SubtotalCard } from "../../components/SubtotalCard";
+import { CardCart } from "../../components/CardCart";
 import { CartContext } from "../../providers/Cart";
-import { ProductContext } from "../../providers/Products";
-import { Container, CardCart, RemoveAllBttn } from "./styles";
-import "./styles.css";
-import { AiFillCloseCircle } from "react-icons/ai";
-
+import { EmptyCart } from "../../components/EmptyCart";
 export const Cart = () => {
-  const { products } = useContext(ProductContext);
-  const { cart, removeProduct, removeAll } = useContext(CartContext);
-
+  const { cart } = useContext(CartContext);
   return (
-    <>
-      <RemoveAllBttn onClick={() => removeAll()}>
-        ESVAZINHAR CARRINHO
-      </RemoveAllBttn>
-      {cart.map((item) => {
-        return (
-          <Container key={item.id}>
-            <figure>
-              <img src={item.img} alt={item.name} />
-            </figure>
-            <CardCart>
-              <AiFillCloseCircle
-                onClick={() => removeProduct(item)}
-                className="delete-icon"
-              />
-              <h5>{item.name}</h5>
-              <span>R$ {item.price}</span>
-            </CardCart>
-          </Container>
-        );
-      })}
-    </>
+    <Wrap>
+      <SubtotalCard />
+      {cart.length < 1 ? <EmptyCart /> : <CardCart />}
+    </Wrap>
   );
 };

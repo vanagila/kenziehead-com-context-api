@@ -1,33 +1,33 @@
-import { Container, NavBar, CartPrice } from "./styles";
-import "./styles.css";
-import { useHistory } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
-import { CartContext } from "../../providers/Cart";
-import { useContext } from "react";
-
+import { Container, NavBar, HyperDell, RedAll, NavLink } from "./styles";
+import { useHistory, useLocation } from "react-router-dom";
 export const Header = () => {
-  const { cart } = useContext(CartContext);
   const history = useHistory();
-
-  const totalPrice = cart.reduce(
-    (previousValue, currentValue) => previousValue + currentValue.price,
-    0
-  );
-
-  const goToCart = () => {
-    history.push("/cart");
-  };
+  const { pathname } = useLocation();
 
   return (
     <NavBar>
-      <h3 onClick={() => history.push("/")}>KenziePhone</h3>
-      <Container onClick={() => goToCart("/signup")}>
-        <FaShoppingCart className="cart-icon" />
-        <p>{cart.length}</p>
+      <Container>
+        <h2 onClick={() => history.push("/")}>KenzieHead</h2>
+        <HyperDell>
+          <NavLink selected={pathname === "/hyperx"} to={"/hyperx"}>
+            HYPERX
+          </NavLink>
+          <NavLink selected={pathname === "/dell"} to={"/dell"}>
+            DELL
+          </NavLink>
+        </HyperDell>
+        <RedAll>
+          <NavLink selected={pathname === "/redragon"} to={"/redragon"}>
+            REDRAGON
+          </NavLink>
+          <NavLink selected={pathname === "/"} to={"/"}>
+            TODOS
+          </NavLink>
+          <NavLink selected={pathname === "/cart"} to={"/cart"}>
+            CARRINHO
+          </NavLink>
+        </RedAll>
       </Container>
-      <CartPrice>
-        <span>R$ {totalPrice}</span>
-      </CartPrice>
     </NavBar>
   );
 };
