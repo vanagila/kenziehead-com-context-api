@@ -1,4 +1,4 @@
-# Projeto KenzieHead com React e Context-API
+# Projeto [KenzieHead](https://react-entrega-s3-kenzishop-com-context-api-vanagila-vanagila.vercel.app/) com React e Context-API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,4 +8,4 @@ Esse projeto foi desenvolvido no curso de Front-End da Kenzie Academy Brasil. As
 
 ### `Tecnologias usadas`
 
-Para a estilização foi usado a biblioteca styled-components e router dom para lidar com as rotas. A aplicação também foi desenvolvida com MOBILE FIRST
+Para a estilização foi usado a biblioteca styled-components e router dom para lidar com as rotas. A aplicação também foi desenvolvida com MOBILE FIRST.
